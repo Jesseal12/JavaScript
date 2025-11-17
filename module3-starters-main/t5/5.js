@@ -93,28 +93,30 @@ const picArray = [
 ];
 let select = document.querySelector('#images');
 // add your code here tee 12.11
-for (let item in picArray){
+for (let item of picArray){
 
   const section = document.createElement('article')
-  const img = document.createElement('img')
-  img.src = item.image.medium;
-  img.alt = item.title;
+
+  const imgs = document.createElement('img')
+  imgs.src = item.image.medium;
+  imgs.alt = item.title;
+
   const figCaption = document.createElement('figcaption');
 
   figCaption.innerText= item.caption
   const figure = document.createElement('figure')
-  figure.append(img,figCaption)
+  figure.append(imgs,figCaption)
 
-  const h2 = document.createElement('h2')
-  h2.innerText= item.title
+  const h2s = document.createElement('h2')
+  h2s.innerText= item.title
 
   const p = document.createElement('p')
-  p.innerText = pic.description
+  p.innerText = item.description
 
 
-  const article = document.createElement(('article'))
+  const article = document.createElement(('articles'))
   article.classList.add('card')
-  article.append(h2,figure,p)
+  article.append(h2s,figure,p)
 
   section.append(article)
 
