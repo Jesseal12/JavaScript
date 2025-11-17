@@ -5,8 +5,8 @@ const loppu = prompt("Syötä lopetus vuosi")
 
 
 for(let i=parseInt(alku);i<=parseInt(loppu);i++){
-  if(i%4&& i!== 100||i%400===0){
-    kohde.innerHTML = `<li>${i}</li>`
+  if(i%4===0 && i%100!==0||i%100===0 && i%400===0){
+    kohde.innerHTML += `<ul>${i}</ul>`
   }
 
 }
