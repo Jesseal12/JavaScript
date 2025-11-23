@@ -91,35 +91,35 @@ const picArray = [
     },
   },
 ];
-let select = document.querySelector('#images');
+let section = document.querySelector('#pictures');
 // add your code here tee 12.11
-for (let item of picArray){
+for (let item of picArray) {
 
-  const section = document.createElement('article')
+  const section = document.createElement('article');
 
-  const imgs = document.createElement('img')
-  imgs.src = item.image.medium;
-  imgs.alt = item.title;
+  const img = document.createElement('img');
+  img.src = item.image.medium;
+  img.alt = item.title;
 
   const figCaption = document.createElement('figcaption');
+  figCaption.innerText = item.caption;
 
-  figCaption.innerText= item.caption
-  const figure = document.createElement('figure')
-  figure.append(imgs,figCaption)
+  const figure = document.createElement('figure');
+  figure.append(img, figCaption);
 
-  const h2s = document.createElement('h2')
-  h2s.innerText= item.title
+  const h2 = document.createElement('h2');
+  h2.innerText = item.title;
 
-  const p = document.createElement('p')
-  p.innerText = item.description
+  const p = document.createElement('p');
+  p.innerText = item.description;
 
+  const article = document.createElement('article');
+  article.classList.add('card');
+  article.append(h2, figure, p);
 
-  const article = document.createElement(('articles'))
-  article.classList.add('card')
-  article.append(h2s,figure,p)
+  section.append(article);
 
-  section.append(article)
-
+}
   // section.appendChild(item);
    // let article= select.appendChild(a);
    // select.innerHTML=article
@@ -128,4 +128,3 @@ for (let item of picArray){
 
 
 
-}

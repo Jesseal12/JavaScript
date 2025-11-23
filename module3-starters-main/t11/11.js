@@ -97,8 +97,8 @@ for (let item in picArray){
 
   const section = document.createElement('pictures')
   const dialog = document.querySelector('dialog')
-  const bigImg = document.querySelector('img')
-
+  const bigImg = dialog.querySelector('img')
+  const closeBtn = dialog.querySelector('span')
 
 
   const img = document.createElement('img');
@@ -135,7 +135,10 @@ for (let item in picArray){
    // select.innerHTML=article
 
 
+closeBtn.addEventListener('click',function(){
+   dialog.close()
 
+  });
 
 
 }
